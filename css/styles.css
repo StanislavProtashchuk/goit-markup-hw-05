@@ -690,3 +690,20 @@ footer {
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
 }
+
+.card-hidden {
+  background-color: var(--accent-color);
+}
+
+.card-hidden-description {
+  margin: 63px 24px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: calc(28 / 18);
+  letter-spacing: 0.03em;
+
+  color: var(--primary-title-color);
+}
