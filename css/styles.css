@@ -290,6 +290,24 @@ button {
   display: flex;
 }
 
+.works-item-title {
+  width: 370px;
+  background: rgba(47, 48, 58, 0.8);
+  padding: 27px;
+  position: absolute;
+  bottom: 0px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--primary-title-color);
+}
+
 .team-title {
   margin-bottom: 50px;
 
@@ -319,6 +337,7 @@ button {
 }
 
 .works-item {
+  position: relative;
   margin-right: 30px;
 }
 
