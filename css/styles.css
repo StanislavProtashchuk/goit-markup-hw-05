@@ -173,6 +173,7 @@ button {
 /* Hero */
 
 .hero {
+  margin: 0 auto;
   max-width: 1600px;
   text-align: center;
   padding: 200px 0;
