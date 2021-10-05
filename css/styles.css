@@ -130,6 +130,8 @@ button {
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
   color: var(--secondary-title-color);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navigation-link:hover,
@@ -152,6 +154,8 @@ button {
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-item-icon {
@@ -217,6 +221,8 @@ button {
   letter-spacing: 0.06em;
   cursor: pointer;
   color: var(--secondary-text-color);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-button:hover,
@@ -655,6 +661,7 @@ footer {
   display: flex;
   flex-direction: column;
   width: 370px;
+  position: relative;
 
   border: 1px solid #eeeeee;
 }
@@ -693,7 +700,17 @@ footer {
 }
 
 .card-hidden {
-  background-color: var(--accent-color);
+  position: absolute;
+
+  max-width: 370px;
+  background-color: rgba(33, 150, 243, 0.9);
+  top: 294px;
+
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-link:hover .card-hidden {
+  transform: translateY(-294px);
 }
 
 .card-hidden-description {
