@@ -152,7 +152,7 @@ button {
   border-radius: 2px;
   background-color: var(--accent-color);
   display: block;
-  bottom: 0;
+  bottom: -1px;
 }
 
 .navigation-contact {
@@ -767,6 +767,12 @@ footer {
   height: 100vh;
   background: rgba(0, 0, 0, 0.2);
   top: 0;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .modal {
