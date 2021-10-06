@@ -117,6 +117,7 @@ button {
 }
 
 .navigation-item {
+  position: relative;
   padding-top: 32px;
   padding-bottom: 32px;
 }
@@ -141,6 +142,17 @@ button {
 
 .current {
   color: var(--accent-color);
+}
+
+.current::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--accent-color);
+  display: block;
+  bottom: 0;
 }
 
 .navigation-contact {
@@ -388,6 +400,9 @@ button {
   justify-content: center;
   width: 44px;
   height: 44px;
+  border-radius: 50%;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-link:hover,
@@ -409,6 +424,8 @@ button {
   width: 20px;
   height: 20px;
   fill: #afb1b8;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-section {
@@ -458,6 +475,8 @@ button {
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-item + .clients-item {
@@ -472,6 +491,8 @@ button {
   height: 60px;
 
   fill: #afb1b8;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Footer */
@@ -499,6 +520,8 @@ footer {
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-navigation-contact:hover,
@@ -534,6 +557,8 @@ footer {
   line-height: calc(24 / 14);
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .adress:hover,
@@ -576,17 +601,14 @@ footer {
 
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-social-link:hover,
 .footer-social-link:focus {
   background-color: var(--accent-color);
   border-radius: 50%;
-}
-
-.footer-social-link:hover .footer-social-icon,
-.footer-social-link:focus .footer-social-icon {
-  fill: var(--primary-title-color);
 }
 
 .footer-social-icon {
@@ -619,6 +641,10 @@ footer {
   letter-spacing: 0.03em;
   color: var(--secondary-title-color);
   cursor: pointer;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    filter 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter-item {
@@ -664,6 +690,8 @@ footer {
   position: relative;
 
   border: 1px solid #eeeeee;
+
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card-link:hover,
@@ -699,29 +727,30 @@ footer {
   color: var(--primary-text-color);
 }
 
-.card-hidden {
-  position: absolute;
-
-  max-width: 370px;
-  background-color: rgba(33, 150, 243, 0.9);
-  top: 294px;
-
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.card-link:hover .card-hidden-description,
+.card-link:focus .card-hidden-description {
+  transform: translateY(-100%);
 }
 
-.card-link:hover .card-hidden {
-  transform: translateY(-294px);
+.card-hidden {
+  position: relative;
+  overflow: hidden;
 }
 
 .card-hidden-description {
-  margin: 63px 24px;
+  position: absolute;
+
+  background: rgba(33, 150, 243, 0.9);
 
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
-  line-height: calc(28 / 18);
+  line-height: 28px;
   letter-spacing: 0.03em;
-
   color: var(--primary-title-color);
+
+  padding: 63px 24px;
+
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
